@@ -1,0 +1,19 @@
+.menu-container {
+  background: black;
+  height: 100vh;
+  width: 20%;
+
+  .logo-container {
+    max-width: 100%;
+  }
+
+  .list-container {
+    .item {
+      padding: 8px;
+      
+      span {
+        color: white;
+      }
+    }
+  }
+}
