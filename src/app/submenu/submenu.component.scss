@@ -1,0 +1,17 @@
+.submenu-container {
+  background: black;
+  height: 100vh;
+  width: 20%;
+  opacity: 0.5;
+  float: left;
+
+  .list-container {
+    .item {
+      padding: 8px;
+      
+      span {
+        color: white;
+      }
+    }
+  }
+}
