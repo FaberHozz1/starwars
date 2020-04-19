@@ -1,5 +1,5 @@
 .menu-container {
-  background: black;
+  background: red;
   height: 100vh;
   width: 20%;
   float: left;
@@ -12,12 +12,17 @@
   }
 
   .list-container {
+    padding-top: 30px;
     .item {
       padding: 8px;
-      
+      text-align: center;
       span {
+        text-transform: uppercase;
         color: white;
       }
+    }
+    .item-selected {
+      background: black;
     }
   }
 }
