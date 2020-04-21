@@ -28,6 +28,7 @@
 
       .item-border {
         height: 14px;
+        padding-bottom: 5px;
         border-bottom: 1px dotted white;
         span {
           color: white;
@@ -37,7 +38,7 @@
 
     .item-selected {
       .item-border {
-        border-bottom: 1px dotted red;
+        // border-bottom: 1px dotted red;
         span {
           color: red;
         }

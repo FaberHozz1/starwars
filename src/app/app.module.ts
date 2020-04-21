@@ -7,6 +7,7 @@ import { MenuComponent } from './menu/menu.component';
 import { SubmenuComponent } from './submenu/submenu.component';
 import { InformationComponent } from './information/information.component';
 import { AccordeonComponent } from './accordeon/accordeon.component';
+import { NodataComponent } from './nodata/nodata.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { AccordeonComponent } from './accordeon/accordeon.component';
     MenuComponent,
     SubmenuComponent,
     InformationComponent,
-    AccordeonComponent
+    AccordeonComponent,
+    NodataComponent
   ],
   imports: [
     BrowserModule,
