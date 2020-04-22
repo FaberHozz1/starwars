@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
+  menuSelected: number = 1;
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  selectMenu(opt){
+    this.menuSelected = opt
+  }
 }
