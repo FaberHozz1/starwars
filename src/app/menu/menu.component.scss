@@ -3,6 +3,7 @@
   height: 100vh;
   width: 20%;
   float: left;
+  background-image: url(../../assets/img/darkback.png);
 
   .logo-container {
     max-width: 100%;
@@ -34,6 +35,7 @@
     .item:hover {
       background: #f56265;
       cursor: pointer;
+      background-color: rgba(245, 98, 100, 0.7);
     }
 
     .itempeople {
