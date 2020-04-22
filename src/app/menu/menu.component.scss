@@ -20,14 +20,49 @@
     padding-top: 30px;
     .item {
       padding: 8px;
-      text-align: center;
+      margin-top: 15px;
+      padding-left: 25px;
+      cursor: default;
+      
+      // text-align: center;
       span {
         text-transform: uppercase;
         color: white;
       }
     }
+
+    .item:hover {
+      background: #f56265;
+      cursor: pointer;
+    }
+
+    .itempeople {
+      padding-left: 40px;
+    }
+
+    .itemplanets {
+      padding-left: 60px;
+    }
+
+    .itemspects {
+      padding-left: 80px;
+    }
+
+    .itemvehicles {
+      padding-left: 100px;
+    }
+
+    .itemstarships {
+      padding-left: 120px;
+    }
+
     .item-selected {
       background: black;
+    }
+
+    .item-selected:hover {
+      background: black;
+      cursor: pointer;
     }
   }
 }

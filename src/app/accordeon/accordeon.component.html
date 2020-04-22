@@ -1,1 +1,23 @@
-<p>accordeon works!</p>
+<mat-accordion>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+        <mat-panel-title>
+            <i class="fas fa-globe-americas"></i>&nbsp; Planets
+        </mat-panel-title>
+        <mat-panel-description>
+        </mat-panel-description>
+        </mat-expansion-panel-header>
+    
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet similique quae error accusantium fuga, odit maiores, quisquam quas eaque modi molestiae laborum, veniam aspernatur itaque sed! Vitae commodi quidem ex.</p>
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                            (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+        <mat-panel-title>
+            <i class="fas fa-bug"></i>&nbsp; Species
+        </mat-panel-title>
+        <mat-panel-description></mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet similique quae error accusantium fuga, odit maiores, quisquam quas eaque modi molestiae laborum, veniam aspernatur itaque sed! Vitae commodi quidem ex.</p>
+    </mat-expansion-panel>
+</mat-accordion>
