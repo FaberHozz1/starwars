@@ -1,6 +1,8 @@
 <div class="main-container">
-  <app-menu></app-menu>
-  <app-submenu></app-submenu>
+  <app-menu (menuItem)="onMenuItemSelected($event)"></app-menu>
+  <app-submenu *ngIf="subMenuItems" [subMenuItems]="subMenuItems" (seeMore)="onSeeMoreSubMenuItems($event)"
+    (subMenuItem)="onSelectSubMenuItem($event)">
+  </app-submenu>
   <div class="information-container">
     <app-information></app-information>
   </div>

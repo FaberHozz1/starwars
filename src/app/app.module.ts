@@ -50,6 +50,7 @@ import { MatTreeModule } from '@angular/material/tree';
 import { ItemService } from './services/items.service';
 import { HttpService } from './services/http.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { SubMenuService } from './services/sub-menu.service';
 
 @NgModule({
   declarations: [
@@ -106,6 +107,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
   ],
   providers: [
     ItemService,
+    SubMenuService,
     HttpService,
     HttpClient,
   ],

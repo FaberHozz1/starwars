@@ -3,25 +3,19 @@
     <input type="text" class="input-search" placeholder="¿Deseas realizar una búsqueda?">
   </div>
   <div class="list-container">
-    <div class="item item-selected">
+    <div class="item" [class.item-selected]="item === subMenuSelected" *ngFor="let item of subMenuItems.results"
+      (click)="selectMenu(item)">
       <div class="item-border">
-        <span>A New Hope</span>
+        <span *ngIf="item.name">{{item.name}}</span>
+        <span *ngIf="item.title">{{item.title}}</span>
         <i class="fas fa-caret-right"></i>
       </div>
     </div>
-    <div class="item">
+    <div class="item" *ngIf="subMenuItems.next && subMenuItems.count > subMenuItems.results.length"
+      (click)="onSeeMore()">
       <div class="item-border">
-        <span>Tatoine</span>
-      </div>
-    </div>
-    <div class="item">
-      <div class="item-border">
-        <span>Yavin IV</span>
-      </div>
-    </div>
-    <div class="item">
-      <div class="item-border">
-        <span>La Ciudad Nube de Bespin</span>
+        <span>See more...</span>
+        <i class="fas fa-caret-right"></i>
       </div>
     </div>
   </div>

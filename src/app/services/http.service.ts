@@ -9,11 +9,7 @@ export class HttpService {
     private http: HttpClient,
   ) { }
 
-  httpGet(option?: string, id?: number): Observable<any> {
-    console.log('apiURL: ');
-    let apiURL = `${URLS.BASE_URL}/`;
-    apiURL += option ? `${option}/` : '';
-    apiURL += (option && id) ? id : '';
+  httpGet(apiURL: string): Observable<any> {
     return this.http.get(apiURL);
   }
 }

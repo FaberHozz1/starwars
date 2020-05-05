@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { ItemService } from '../services/items.service';
 import { HttpService } from '../services/http.service';
 
@@ -9,8 +9,9 @@ import { HttpService } from '../services/http.service';
 })
 export class MenuComponent implements OnInit {
 
-  menuSelected = 1;
+  menuSelected: string;
   menuItems: string[];
+  @Output() menuItem = new EventEmitter<string>();
 
   constructor(
     private itemService: ItemService,
@@ -25,8 +26,8 @@ export class MenuComponent implements OnInit {
     );
   }
 
-  selectMenu(opt) {
+  selectMenu(opt: string) {
     this.menuSelected = opt;
-    
+    this.menuItem.emit(this.menuSelected);
   }
 }
