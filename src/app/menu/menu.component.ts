@@ -27,5 +27,6 @@ export class MenuComponent implements OnInit {
 
   selectMenu(opt) {
     this.menuSelected = opt;
+    
   }
 }
