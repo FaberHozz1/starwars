@@ -47,6 +47,9 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
+import { ItemService } from './services/items.service';
+import { HttpService } from './services/http.service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -58,6 +61,7 @@ import { MatTreeModule } from '@angular/material/tree';
     NodataComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -100,7 +104,11 @@ import { MatTreeModule } from '@angular/material/tree';
     PortalModule,
     ScrollingModule
   ],
-  providers: [],
+  providers: [
+    ItemService,
+    HttpService,
+    HttpClient,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
