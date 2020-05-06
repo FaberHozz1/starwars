@@ -4,6 +4,6 @@
     (subMenuItem)="onSelectSubMenuItem($event)">
   </app-submenu>
   <div class="information-container">
-    <app-information></app-information>
+    <app-information *ngIf="itemSelectedInfo" [itemSelectedInfo]="itemSelectedInfo"></app-information>
   </div>
 </div>

@@ -4,7 +4,8 @@
         <div class="information-container">
             <div class="header">
                 <div class="header-border">
-                    <span>A New Hope</span>
+                    <span *ngIf="itemInfo.name">{{itemInfo.name}}</span>
+                    <span *ngIf="itemInfo.title">{{itemInfo.title}}</span>
                 </div>
             </div>
             <div class="important-information">

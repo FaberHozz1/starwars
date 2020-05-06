@@ -11,6 +11,7 @@ export class AppComponent {
   title = 'starwars';
   subMenuItems: any;
   menuItem: string;
+  itemSelectedInfo: any;
 
   constructor(
     private subMenuService: SubMenuService,
@@ -25,6 +26,7 @@ export class AppComponent {
 
   onSelectSubMenuItem(event: any) {
     console.log('--> onSelectSubMenuItem: ', event);
+    this.itemSelectedInfo = event;
   }
 
   onSeeMoreSubMenuItems(event: any) {
