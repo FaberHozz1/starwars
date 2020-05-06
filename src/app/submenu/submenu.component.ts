@@ -11,6 +11,7 @@ export class SubmenuComponent implements OnChanges {
   @Output() subMenuItem = new EventEmitter<string>();
   @Output() seeMore = new EventEmitter<string>();
   subMenuSelected: any;
+  filterSubMenuItems = "";
 
   ngOnChanges(): void {
     if (this.subMenuItems && this.subMenuItems.results) {

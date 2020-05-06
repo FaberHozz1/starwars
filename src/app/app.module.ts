@@ -51,6 +51,8 @@ import { ItemService } from './services/items.service';
 import { HttpService } from './services/http.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { SubMenuService } from './services/sub-menu.service';
+import { FilterPipe } from './pipes/filter.pipe';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -59,7 +61,8 @@ import { SubMenuService } from './services/sub-menu.service';
     SubmenuComponent,
     InformationComponent,
     AccordeonComponent,
-    NodataComponent
+    NodataComponent,
+    FilterPipe
   ],
   imports: [
     HttpClientModule,
@@ -103,7 +106,8 @@ import { SubMenuService } from './services/sub-menu.service';
     MatTooltipModule,
     MatTreeModule,
     PortalModule,
-    ScrollingModule
+    ScrollingModule,
+    FormsModule
   ],
   providers: [
     ItemService,
