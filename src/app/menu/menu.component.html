@@ -3,23 +3,9 @@
     <img src="../../assets/img/logo1.png">
   </div>
   <div class="list-container">
-    <div class="item" (click)="selectMenu(1)" [ngClass]="{'item-selected':menuSelected == 1}">
-      <span>Peliculas</span>
-    </div>
-    <div class="item itempeople" (click)="selectMenu(2)" [ngClass]="{'item-selected':menuSelected == 2}">
-      <span>Personas</span>
-    </div>
-    <div class="item itemplanets" (click)="selectMenu(3)" [ngClass]="{'item-selected':menuSelected == 3}">
-      <span>Planetas</span>
-    </div>
-    <div class="item itemspects" (click)="selectMenu(4)" [ngClass]="{'item-selected':menuSelected == 4}">
-      <span>Especies</span>
-    </div>
-    <div class="item itemvehicles" (click)="selectMenu(5)" [ngClass]="{'item-selected':menuSelected == 5}">
-      <span>Vehiculos</span>
-    </div>
-    <div class="item itemstarships" (click)="selectMenu(6)" [ngClass]="{'item-selected':menuSelected == 6}">
-      <span>Naves</span>
+    <!-- class="{{'item' + item}}" -->
+    <div class="item" *ngFor="let item of menuItems; let i = index" (click)="selectMenu(item)" [class.item-selected]="menuSelected === item">
+      <span>{{item}}</span>
     </div>
   </div>
 </div>

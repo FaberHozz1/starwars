@@ -47,6 +47,12 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
+import { ItemService } from './services/items.service';
+import { HttpService } from './services/http.service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { SubMenuService } from './services/sub-menu.service';
+import { FilterPipe } from './pipes/filter.pipe';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -55,9 +61,11 @@ import { MatTreeModule } from '@angular/material/tree';
     SubmenuComponent,
     InformationComponent,
     AccordeonComponent,
-    NodataComponent
+    NodataComponent,
+    FilterPipe
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -98,9 +106,15 @@ import { MatTreeModule } from '@angular/material/tree';
     MatTooltipModule,
     MatTreeModule,
     PortalModule,
-    ScrollingModule
+    ScrollingModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    ItemService,
+    SubMenuService,
+    HttpService,
+    HttpClient,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

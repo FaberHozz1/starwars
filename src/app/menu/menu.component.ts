@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { ItemService } from '../services/items.service';
+import { HttpService } from '../services/http.service';
 
 @Component({
   selector: 'app-menu',
@@ -7,13 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  menuSelected: number = 1;
-  constructor() { }
+  menuSelected: string;
+  menuItems: string[];
+  @Output() menuItem = new EventEmitter<string>();
+
+  constructor(
+    private itemService: ItemService,
+  ) { }
 
   ngOnInit(): void {
+    this.itemService.getItems().subscribe(
+      items => {
+        this.menuItems = items;
+        this.selectMenu(this.menuItems[0]);
+      }
+    );
   }
 
-  selectMenu(opt){
-    this.menuSelected = opt
+  selectMenu(opt: string) {
+    this.menuSelected = opt;
+    this.menuItem.emit(this.menuSelected);
   }
 }
